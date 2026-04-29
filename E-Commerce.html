@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanShop - Simple E-Commerce</title>
+<link rel="stylesheet" href="E-Commerce.css">
+</head>
+
+<body>
+
+<header>
+  <h1>UrbanShop</h1>
+  <p>Your Trusted Online Shopping Portal</p>
+</header>
+
+<nav>
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('about')">About</a>
+  <a onclick="showPage('products')">Products</a>
+  <a onclick="showPage('orders')">Orders</a>
+  <a onclick="showPage('wishlist')">Wishlist</a>
+  <a onclick="showPage('reviews')">Reviews</a>
+  <a onclick="showPage('login')">Login</a>
+  <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <h2>Welcome to UrbanShop</h2>
+  <p>UrbanShop brings you a seamless shopping experience inspired by platforms like Flipkart and Amazon. Browse top-rated gadgets, accessories, and fashion items all in one place.</p>
+  <ul>
+    <li>🚚 Fast Delivery</li>
+    <li>💳 Secure Payments</li>
+    <li>🔄 Easy Returns</li>
+  </ul>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <h2>About Us</h2>
+  <p>At UrbanShop, we bring together the finest selection of products under one digital roof. Whether you're searching for the latest gadgets, trendy fashion, or essential home appliances, our goal is to make your shopping experience simple, fast, and delightful. We believe in quality, reliability, and trust — values that define everything we do.</p>
+  <p>Our platform is designed to cater to all your needs with secure transactions, easy returns, and 24/7 support. Start exploring and discover why thousands of customers choose UrbanShop for their online shopping experience.</p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="page">
+  <h2>Featured Products</h2>
+
+  <div class="product-card">
+    <img src="Wireless Headphones.jpg" alt="Wireless Headphones">
+    <h3>Wireless Headphones</h3>
+    <p>₹2,499</p>
+    <p>⭐⭐⭐⭐☆</p>
+
+    <div class="product-buttons">
+      <button class="btn" onclick="added('Wireless Headphones')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="Smart Watch.png" alt="Smart Watch">
+    <h3>Smart Watch</h3>
+    <p>₹3,999</p>
+    <p>⭐⭐⭐⭐⭐</p>
+
+    <div class="product-buttons">
+      <button class="btn" onclick="added('Smart Watch')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="Bluetooth Speaker.jpg" alt="Bluetooth Speaker">
+    <h3>Bluetooth Speaker</h3>
+    <p>₹1,299</p>
+    <p>⭐⭐⭐⭐☆</p>
+
+    <div class="product-buttons">
+      <button class="btn" onclick="added('Bluetooth Speaker')">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- ORDERS -->
+<section id="orders" class="page">
+  <h2>Your Orders</h2>
+  <ul>
+    <li>Order #2025 — Wireless Headphones — Delivered ✅</li>
+    <li>Order #2032 — Laptop Sleeve — Shipped 🚚</li>
+  </ul>
+</section>
+
+<!-- WISHLIST -->
+<section id="wishlist" class="page">
+  <h2>Your Wishlist</h2>
+  <ul>
+    <li>Smart Watch — Saved for Later</li>
+    <li>Gaming Mouse — Added Sep 2025</li>
+  </ul>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="page">
+  <h2>Customer Reviews</h2>
+
+  <div class="review">
+    <b>Rohit</b> ⭐⭐⭐⭐☆<br>
+    Great quality and fast delivery!
+  </div>
+
+  <div class="review">
+    <b>Sana</b> ⭐⭐⭐⭐⭐<br>
+    Excellent service and product range.
+  </div>
+
+  <h3>Leave a Review</h3>
+  <form id="reviewForm">
+    <label>Name:</label>
+    <input type="text" id="rname" required>
+
+    <label>Rating:</label>
+    <select id="rrate" required>
+      <option value="">Select</option>
+      <option>5</option><option>4</option><option>3</option>
+      <option>2</option><option>1</option>
+    </select>
+
+    <label>Comment:</label>
+    <textarea id="rcomment" required></textarea>
+
+    <button class="btn" type="submit">Submit Review</button>
+  </form>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="page">
+  <h2>User Login</h2>
+
+  <form id="loginForm">
+    <label>Email:</label>
+    <input type="email" id="lemail" required>
+
+    <label>Password:</label>
+    <input type="password" id="lpass" minlength="6" required>
+
+    <button class="btn" type="submit">Login</button>
+  </form>
+
+  <h3>New User Registration</h3>
+  <form id="regForm">
+    <label>Name:</label>
+    <input type="text" id="rname2" minlength="2" required>
+
+    <label>Email:</label>
+    <input type="email" id="remail" required>
+
+    <label>Phone:</label>
+    <input type="tel" id="rphone" pattern="[0-9]{10}" required placeholder="10 digits">
+
+    <label>Password:</label>
+    <input type="password" id="rpass" minlength="6" required>
+
+    <button class="btn" type="submit">Register</button>
+  </form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+  <h2>Customer Care</h2>
+  <p>📞 +91 9876543210 (Mon–Sat, 9am–6pm)</p>
+  <p>✉ support@urbanshop.example</p>
+  <p>🏢 UrbanShop Pvt Ltd, Bengaluru, India</p>
+
+  <h3>Report an Issue</h3>
+  <ul>
+    <li><a href="#">Report order problem</a></li>
+    <li><a href="#">Report product issue</a></li>
+    <li><a href="#">Refund / Cancellation</a></li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 UrbanShop | All Rights Reserved.
+</footer>
+
+<script src="E-Commerce.js"></script>
+</body>
+</html>
