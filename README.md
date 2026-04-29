@@ -31,13 +31,13 @@ This project simulates a basic online shopping platform with multiple sections l
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YourUsername/UrbanShop.git
+git clone https://github.com/jeyakiruthikad/E-Commerce_Application.git
 ```
 
 2. Navigate into the folder:
 
 ```bash
-cd UrbanShop
+cd E-Commerce_Application
 ```
 
 3. Open in browser:
